@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+    <class name="test.Person" table="PersonInformation">
+    <id name="id" column="eid">
+    <generator class="increment"></generator>
+    </id>
+
+    <property name="name" column="pname"></property>
+
+    <property name="salary" column="psalary"></property>
+     <property name="city" column="pcity"></property>
+     <property name="age" column="page"></property>
+     
+    </class>
+</hibernate-mapping>
