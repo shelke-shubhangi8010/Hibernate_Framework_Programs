@@ -10,7 +10,7 @@ public class AccessData {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-Configuration conf =new Configuration();
+      Configuration conf =new Configuration();
 		
 		conf.configure("hibernate.cfg.xml");
 		
