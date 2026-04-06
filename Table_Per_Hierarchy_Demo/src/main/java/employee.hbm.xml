@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-mapping>
+    <class name="test.Employee" table="Employee" discriminator-value="emp">
+        <id name="id" column="eid">
+            <generator class="increment"/>
+        </id>
+
+        <discriminator column="type" type="string"/> <!-- Temporary table created -->
+        <property name="name" column="ename"/>
+
+        <subclass name="test.Regular_Employee" discriminator-value="reg_emp">
+            <property name="salary" column="salary"/>
+            <property name="bonus" column="Bonus"/>
+        </subclass>
+
+        <subclass name="test.Contract_Employee" discriminator-value="Con_emp">
+            <property name="pay_per_hour" column="pay_per_hour"/>
+            <property name="contract_period" column="contract_period"/>
+        </subclass>
+    </class>
+</hibernate-mapping>
+
+
